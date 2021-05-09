@@ -54,7 +54,7 @@ body {
 }
 .wrapper {
   width: 100%;
-
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -67,13 +67,11 @@ img {
 header {
   background: rgb(255, 143, 112);
   //   background-image: linear-gradient(145deg, rgba(255, 143, 112, 1) 47%, rgba(255, 61, 84, 1) 86%);
-  border: 1px solid $Light-red;
 
+  width: 100%;
   border-bottom-left-radius: 5em;
   padding: 15px;
   padding-top: 50px;
-  z-index: 2;
-  position: relative;
   overflow: hidden;
   color: $White;
 
@@ -118,11 +116,15 @@ header {
 .dropdown {
   display: none;
 }
-.logo {
-  width: 30%;
-  max-width: 100px;
-  height: 30%;
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.logo {
+  width: 100px;
+}
+
 .top-navigation {
   button {
     display: none;
@@ -131,20 +133,54 @@ header {
 
 @media screen and (max-width: 600px) {
   .top-navigation.nav-open .dropdown {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .dropdown-content li {
+    display: none;
   }
   .top-navigation.nav-open {
     position: absolute;
     width: calc(100% - 30px);
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 1.5em;
     background: $White;
-    color: black;
-    z-index: 5;
-    border: 1px solid black;
-    button {
+    color: $Very-dark-blue;
+    font-weight: bold;
+    list-style: none;
+    box-shadow: 0px 6px 33px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 0.3em;
+    .buttons {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+    .btn-primary {
       display: block;
+      color: $White;
+      background: linear-gradient(90deg, rgba(255, 143, 112, 1) 27%, rgba(255, 61, 84, 1) 100%);
+      border: none;
+      padding: 1.1em 2em;
+      margin-bottom: 15px;
+    }
+    .btn-tertiary {
+      display: block;
+      color: $Very-dark-blue;
+    }
+    li {
+      list-style: none;
+    }
+    span {
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
+    img {
+      display: block;
+      margin-left: 5px;
+      //Change white fill of image to $Light-red Color (#ff525d)
+      filter: invert(44%) sepia(57%) saturate(1162%) hue-rotate(318deg) brightness(99%) contrast(111%);
     }
   }
 }
@@ -175,10 +211,3 @@ button {
 ////////
 //////
 //////////
-
-.wrapper-nav {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
