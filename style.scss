@@ -59,9 +59,6 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
 }
-img {
-  display: none; //Just for coding convenience in mobile
-}
 
 ///Styling Header Start
 header {
@@ -225,3 +222,118 @@ button {
 ////////
 //////
 //////////
+
+////Styling section1
+section {
+  margin: 20px 0px;
+  padding: 0px 15px;
+  h3,
+  h4 {
+    color: $Very-dark-blue;
+    font-size: 1.44rem; //Same size in mobile
+    text-align: center;
+  }
+}
+
+.section-1-content {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  align-items: center;
+  picture {
+    width: 100%;
+    height: auto;
+    order: -1;
+    margin-left: -50px; //correct align the image
+  }
+  h4 {
+    width: 70%;
+    margin: 5px 0px;
+  }
+  p {
+    padding: 0px 35px;
+    margin: 15px 0px;
+    line-height: 1.6;
+  }
+}
+
+.section-2 {
+  background: url(./images/bg-pattern-circles.svg) no-repeat, linear-gradient($Gradient-blue-start, $Gradient-blue-end);
+  background-size: cover, 100% 100%;
+  background-position: center -215px, 0 0;
+  position: relative;
+  margin-top: 200px;
+  border-radius: 0em 5em 0em 5em;
+  .section-2-content {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+    margin: 100px 0;
+    line-height: 1.6;
+  }
+  h3,
+  p {
+    margin: 15px 0px;
+    padding: 0px 20px;
+  }
+  h3 {
+    margin-top: 100px;
+    color: $White;
+  }
+  p {
+    color: $Grayish-blue;
+    width: 35ch;
+  }
+  img {
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    height: auto;
+  }
+}
+
+.section-3 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 50px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .section-3-content {
+    text-align: center;
+    width: 30ch;
+    line-height: 1.6;
+  }
+}
+
+footer {
+  background: $Very-dark-black-blue;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 45px 0px;
+  border-radius: 0em 5em 0em 0em;
+  img {
+    margin-bottom: 30px;
+  }
+  ul {
+    width: 100%;
+    padding: 0;
+    color: $White;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  li {
+    color: $Grayish-blue;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+}
