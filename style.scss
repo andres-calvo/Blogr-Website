@@ -130,7 +130,23 @@ header {
     display: none;
   }
 }
-
+.dropdown-content {
+  display: none;
+}
+.dropdown[state="open"] .dropdown-content {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: lighten($Grayish-blue, 15%);
+  color: $Very-dark-grayish-blue;
+  margin-top: 15px;
+  padding: 15px 0px;
+  border-radius: 0.3em;
+}
+.dropdown-content li {
+  margin: 5px 0px;
+}
 @media screen and (max-width: 600px) {
   .top-navigation.nav-open .dropdown {
     display: flex;
@@ -138,9 +154,7 @@ header {
     align-items: center;
     margin-bottom: 25px;
   }
-  .dropdown-content li {
-    display: none;
-  }
+
   .top-navigation.nav-open {
     position: absolute;
     width: calc(100% - 30px);
