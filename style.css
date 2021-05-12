@@ -343,8 +343,8 @@ header p {
 button {
   padding: 1.1em;
   border-radius: 2em;
-  border: 1px solid white;
-  background: white;
+  border: 1px solid #ffff;
+  background: #ffff;
   color: #ff525d;
   font-weight: bold;
   cursor: pointer;
