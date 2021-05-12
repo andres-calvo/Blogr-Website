@@ -264,8 +264,13 @@ header {
   .wrapper {
     overflow: hidden;
   }
-  .wrapper > * {
-    padding: 5% 8%;
+  // .wrapper > * {
+  //   padding: 5% 5% 0% 5%;
+  // }
+  .section-1,
+  .section-2,
+  header {
+    padding: 5% 5% 0% 5%;
   }
   header {
     background-size: 100% 100%, 2500px 2500px;
@@ -273,6 +278,9 @@ header {
   header,
   section {
     padding: 0px 5%;
+  }
+  .dropdown {
+    margin-right: 5%;
   }
 }
 
@@ -385,6 +393,12 @@ section {
       padding: 0;
     }
   }
+  @media screen and (min-width: 1200px) {
+    picture,
+    picture img {
+      max-width: 700px;
+    }
+  }
 }
 
 .section-2 {
@@ -480,6 +494,22 @@ section {
     height: auto;
     order: -1;
   }
+  @media screen and (min-width: 950px) {
+    flex-flow: row nowrap;
+    text-align: left;
+    picture,
+    picture img {
+      max-width: 600px;
+      margin: 0;
+      width: 100%;
+      margin-left: -142px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    picture img {
+      max-width: 700px;
+    }
+  }
 }
 .section-3-content {
   text-align: center;
@@ -499,6 +529,16 @@ section {
   h4 {
     margin: 0;
   }
+  @media screen and (min-width: 950px) {
+    text-align: left;
+    flex-flow: column;
+    align-items: center;
+    h4,
+    p {
+      width: 100%;
+      text-align: left;
+    }
+  }
 }
 
 footer {
@@ -510,6 +550,11 @@ footer {
   border-radius: 0em 5em 0em 0em;
   img {
     margin-bottom: 30px;
+  }
+  @media screen and (min-width: 950px) {
+    flex-flow: row;
+    align-items: flex-start;
+    padding: 5%;
   }
 }
 .footer-content {
@@ -526,6 +571,9 @@ footer {
     color: $Grayish-blue;
     margin-top: 15px;
     cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   @media screen and (min-width: 500px) {
     display: flex;
