@@ -25,55 +25,53 @@
   <body>
     <div class="wrapper">
       <header>
-        <!-- <img src="./images/bg-pattern-intro.svg" class="header-bg" alt="" /> -->
         <div class="header-top">
           <img src="./images/logo.svg" alt="" class="logo" />
           <div href="javascript:void(0)" class="icon" onclick="openNavigation()">
             <img src="./images/icon-hamburger.svg" id="icon-hamburger" alt="" />
             <img src="./images/icon-close.svg" id="icon-close" alt="" />
           </div>
+          <ul class="top-navigation" id="topNav">
+            <li class="dropdown" state="close">
+              <span>Product <img src="./images/icon-arrow-light.svg" alt="" /></span>
+              <ul class="dropdown-content">
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
+            </li>
+            <li class="dropdown" state="close">
+              <span>Company <img src="./images/icon-arrow-light.svg" /></span>
+              <ul class="dropdown-content">
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </li>
+            <li class="dropdown" state="close">
+              <span>Connect <img src="./images/icon-arrow-light.svg" alt="" /></span>
+              <ul class="dropdown-content">
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </li>
+
+            <div class="buttons">
+              <button class="btn-tertiary">Login</button>
+              <button class="btn-primary">Sign Up</button>
+            </div>
+          </ul>
         </div>
-
-        <ul class="top-navigation" id="topNav">
-          <li class="dropdown" state="close">
-            <span>Product <img src="./images/icon-arrow-light.svg" alt="" /></span>
-            <ul class="dropdown-content">
-              <li>Overview</li>
-              <li>Pricing</li>
-              <li>Marketplace</li>
-              <li>Features</li>
-              <li>Integrations</li>
-            </ul>
-          </li>
-          <li class="dropdown" state="close">
-            <span>Company <img src="./images/icon-arrow-light.svg" /></span>
-            <ul class="dropdown-content">
-              <li>About</li>
-              <li>Team</li>
-              <li>Blog</li>
-              <li>Careers</li>
-            </ul>
-          </li>
-          <li class="dropdown" state="close">
-            <span>Connect <img src="./images/icon-arrow-light.svg" alt="" /></span>
-            <ul class="dropdown-content">
-              <li>Contact</li>
-              <li>Newsletter</li>
-              <li>LinkedIn</li>
-            </ul>
-          </li>
-
-          <div class="buttons">
-            <button class="btn-tertiary">Login</button>
-            <button class="btn-primary">Sign Up</button>
-          </div>
-        </ul>
 
         <div class="header-content">
           <h1>A modern publishing platform</h1>
           <p>Grow your audience and build your online brand</p>
           <div class="buttons">
-            <button>Start for Free</button>
+            <button class="btn-primary">Start for Free</button>
             <button class="btn-secondary">Learn More</button>
           </div>
         </div>

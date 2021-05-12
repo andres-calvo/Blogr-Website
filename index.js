@@ -21,14 +21,17 @@ for (drop of drops) {
       parent = parent.parentNode;
     }
     console.log(parent);
-    if (parent.getAttribute("state") == "open") {
-      parent.setAttribute("state", "close");
-    } else {
-      var otherelements = document.querySelectorAll(".dropdown[state='open']");
-      for (element of otherelements) {
-        element.setAttribute("state", "close");
+    var devicewidth = window.innerWidth;
+    if (devicewidth < 600) {
+      if (parent.getAttribute("state") == "open") {
+        parent.setAttribute("state", "close");
+      } else {
+        var otherelements = document.querySelectorAll(".dropdown[state='open']");
+        for (element of otherelements) {
+          element.setAttribute("state", "close");
+        }
+        parent.setAttribute("state", "open");
       }
-      parent.setAttribute("state", "open");
     }
   });
 }
