@@ -506,8 +506,9 @@ section {
     }
   }
   @media screen and (min-width: 1200px) {
+    picture,
     picture img {
-      max-width: 700px;
+      max-width: 900px;
     }
   }
 }
@@ -532,11 +533,15 @@ section {
   @media screen and (min-width: 950px) {
     text-align: left;
     flex-flow: column;
-    align-items: center;
+    margin-left: 4%;
+    width: auto;
     h4,
     p {
       width: 100%;
       text-align: left;
+    }
+    div {
+      max-width: 35ch;
     }
   }
 }
